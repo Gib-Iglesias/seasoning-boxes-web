@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "themes": "Temáticas",
+    "howItWorks": "Cómo funciona",
+    "faq": "Preguntas",
+    "cart": "Carrito",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "account": "Mi cuenta"
+  },
+  "hero": {
+    "tag": "✨ Caja Sorpresa · Envío UK",
+    "title": "La sorpresa perfecta para cada fandom",
+    "titleEm": "sorpresa",
+    "subtitle": "Cajas misterio llenas de coleccionables, figuras y accesorios — temáticas para lo que más amas.",
+    "cta": "Elige tu temática",
+    "shipping": "Envío gratis en UK en compras mayores a £50"
+  },
+  "themes": {
+    "step": "Paso 1 · Elige tu temática",
+    "title": "¿Qué universo te apasiona?",
+    "subtitle": "Cada caja es seleccionada a mano según tu universo favorito",
+    "outOfStock": "Sin stock",
+    "items": {
+      "anime": {
+        "name": "Anime",
+        "desc": "Dragon Ball, Naruto, One Piece y más"
+      },
+      "scifi": {
+        "name": "Sci-Fi",
+        "desc": "Star Wars, Star Trek y más allá"
+      },
+      "kawaii": {
+        "name": "Kawaii",
+        "desc": "Hello Kitty, Cinnamoroll y amigos"
+      },
+      "fantasy": {
+        "name": "Fantasía",
+        "desc": "Harry Potter, My Little Pony y magia"
+      },
+      "cute": {
+        "name": "Cute",
+        "desc": "Pocoyo, Winnie Pooh y más"
+      },
+      "fresas": {
+        "name": "Niñas Fresita",
+        "desc": "Fresa y su magia rosa"
+      }
+    }
+  },
+  "configurator": {
+    "step": "Paso 2 · Arma tu caja",
+    "title": "Elige tamaño y cantidad",
+    "subtitle": "Cada artículo es una sorpresa — te prometemos que te encantará",
+    "selectThemeHint": "← Selecciona una temática arriba para comenzar",
+    "sizeLabel": "Tamaño de la caja",
+    "qtyLabel": "Número de cajas",
+    "pieces": "piezas",
+    "perBox": "por caja",
+    "box": "caja",
+    "boxes": "cajas",
+    "total": "Total",
+    "addToCart": "Agregar al carrito",
+    "addedToCart": "¡Agregado! 🎉",
+    "sizes": {
+      "S": { "name": "Pequeña", "pieces": "3" },
+      "M": { "name": "Mediana", "pieces": "6" },
+      "L": { "name": "Grande", "pieces": "10" }
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "steps": [
+      { "title": "Elige tu tema", "desc": "Selecciona el universo que más te emociona" },
+      { "title": "Escoge el tamaño", "desc": "Pequeña, Mediana o Grande — todas llenas de sorpresas" },
+      { "title": "Curadamos y enviamos", "desc": "Artículos seleccionados a mano desde St Albans, UK" },
+      { "title": "Desempaca la magia", "desc": "Cada artículo es una sorpresa que vas a adorar" }
+    ]
+  },
+  "footer": {
+    "tagline": "Sorpresas curadas, enviadas desde UK",
+    "rights": "© 2025 Seasoning Boxes. Todos los derechos reservados.",
+    "location": "St Albans, Reino Unido"
+  }
+}
