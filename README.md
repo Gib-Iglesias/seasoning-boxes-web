@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎁 Seasoning Boxes
 
 E-commerce de cajitas sorpresa temáticas. Enviado desde St Albans, UK.
@@ -69,3 +70,7 @@ Para cambiarlo: editar `lib/constants.ts` → `ADMIN_EMAIL`
 - **Fase 2**: Supabase (DB, inventario, carrito persistente, auth completo)
 - **Fase 3**: Stripe (checkout, webhooks, confirmación de pedidos)
 - **Fase 4**: Panel admin (inventario, pedidos, disponibilidad)
+=======
+# seasoning-boxes-web
+Web for Seasoning Boxes
+>>>>>>> 6f19359553c6f202bceef10afe281733a01c3d7f
