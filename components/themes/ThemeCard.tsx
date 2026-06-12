@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import { useLocaleContext } from "@/lib/i18n/LocaleContext";
-import type { Theme } from "@/lib/constants";
+import type { Category } from "@/lib/constants";
 
 interface ThemeCardProps {
-  theme: Theme;
+  theme: Category;
   selected: boolean;
   onSelect: (slug: string) => void;
   index: number;
@@ -12,7 +12,7 @@ interface ThemeCardProps {
 
 export default function ThemeCard({ theme, selected, onSelect, index }: ThemeCardProps) {
   const { t } = useLocaleContext();
-  const item = t.themes.items[theme.slug as keyof typeof t.themes.items];
+  const item = t.categories.items[theme.slug as keyof typeof t.categories.items];
 
   return (
     <motion.div
@@ -20,33 +20,31 @@ export default function ThemeCard({ theme, selected, onSelect, index }: ThemeCar
       transition={{ duration: 0.4, delay: index * 0.07 }}
       whileHover={{ y: -4, transition: { duration: 0.18 } }}
       onClick={() => onSelect(theme.slug)}
-      className="relative rounded-2xl p-5 text-center cursor-pointer transition-all duration-200 overflow-hidden"
+      className="relative rounded-2xl overflow-hidden text-center cursor-pointer transition-all duration-200"
       style={{
-        background: selected ? "#fdf5f0" : "white",
         border: selected ? "2px solid var(--wine)" : "2px solid var(--sand)",
         boxShadow: selected ? "0 8px 24px rgba(129,11,56,0.15)" : "none",
-      }}>
-      <div className="absolute top-0 left-0 right-0 h-1 transition-transform duration-200 origin-left"
-        style={{ background: "var(--wine)", transform: selected ? "scaleX(1)" : "scaleX(0)" }} />
-
-      {theme.badge && (
-        <span className="absolute top-2 right-2 text-[9px] tracking-widest uppercase px-2 py-0.5 rounded-full"
-          style={{ background: "var(--wine)", color: "var(--cream)" }}>
-          {theme.badge}
-        </span>
-      )}
-
-      <span className="text-4xl block mb-3 leading-none">{theme.emoji}</span>
-      <p className="font-display font-bold text-sm mb-1" style={{ color: "var(--dark)" }}>{item.name}</p>
-      <p className="text-[11px] leading-snug font-light" style={{ color: "#9a6868" }}>{item.desc}</p>
-
-      {selected && (
-        <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
-          className="absolute bottom-2 right-2 w-5 h-5 rounded-full flex items-center justify-center text-[10px]"
-          style={{ background: "var(--wine)", color: "var(--cream)" }}>
-          ✓
-        </motion.div>
-      )}
+      }}
+    >
+      <div className="flex flex-col items-center justify-center py-6 text-3xl"
+        style={{ background: theme.gradient }}>
+        <span className="mb-1">{theme.emoji}</span>
+        {theme.badge && (
+          <span className="text-[8px] tracking-widest uppercase px-2 py-0.5 rounded-full"
+            style={{ background: "rgba(241,226,209,0.88)", color: "var(--wine)" }}>
+            {theme.badge}
+          </span>
+        )}
+      </div>
+      <div className="px-3 py-3" style={{ background: selected ? "#fdf5f0" : "white" }}>
+        <p className="font-display font-bold text-sm mb-0.5" style={{ color: "var(--dark)" }}>{item?.name}</p>
+        <p className="text-[10px] leading-snug font-light" style={{ color: "#9a6868" }}>{item?.desc}</p>
+        {selected && (
+          <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}
+            className="absolute bottom-2 right-2 w-5 h-5 rounded-full flex items-center justify-center text-[10px]"
+            style={{ background: "var(--wine)", color: "var(--cream)" }}>✓</motion.div>
+        )}
+      </div>
     </motion.div>
   );
 }

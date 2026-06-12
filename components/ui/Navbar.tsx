@@ -1,5 +1,4 @@
 "use client";
-
 import { useRouter, usePathname } from "next/navigation";
 import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import Link from "next/link";
@@ -18,7 +17,6 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
 
   return (
     <>
-      {/* Lang bar */}
       <div className="flex justify-end items-center gap-2 px-6 py-2 text-xs tracking-widest"
         style={{ background: "var(--dark)", color: "var(--cream)" }}>
         <span style={{ color: "rgba(241,226,209,0.45)" }}>LANG</span>
@@ -29,13 +27,10 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
               borderColor: locale === l ? "var(--wine)" : "rgba(241,226,209,0.25)",
               background: locale === l ? "var(--wine)" : "transparent",
               color: "var(--cream)",
-            }}>
-            {l.toUpperCase()}
-          </button>
+            }}>{l.toUpperCase()}</button>
         ))}
       </div>
 
-      {/* Nav */}
       <nav className="flex items-center justify-between px-6 h-16 sticky top-0 z-50"
         style={{ background: "var(--wine)" }}>
         <Link href={`/${locale}`} className="font-display text-2xl font-black tracking-tight"
@@ -43,13 +38,15 @@ export default function Navbar({ cartCount = 0 }: { cartCount?: number }) {
           Seasoning <span style={{ color: "var(--sand)" }}>Boxes</span>
         </Link>
 
-        <div className="flex items-center gap-6">
-          <Link href={`/${locale}#themes`} className="text-sm tracking-wide hidden md:block"
-            style={{ color: "rgba(241,226,209,0.75)" }}>
+        <div className="flex items-center gap-5">
+          <Link href={`/${locale}/categories`}
+            className="text-sm tracking-wide hidden md:block transition-colors duration-200 hover:text-white"
+            style={{ color: "rgba(241,226,209,0.8)" }}>
             {t.nav.themes}
           </Link>
-          <Link href={`/${locale}#how`} className="text-sm tracking-wide hidden md:block"
-            style={{ color: "rgba(241,226,209,0.75)" }}>
+          <Link href={`/${locale}#how`}
+            className="text-sm tracking-wide hidden md:block transition-colors duration-200 hover:text-white"
+            style={{ color: "rgba(241,226,209,0.8)" }}>
             {t.nav.howItWorks}
           </Link>
 
